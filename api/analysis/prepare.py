@@ -51,3 +51,5 @@ def load_data(file_path: str) -> pd.DataFrame:
     df = df.dropna(subset=["entity_id"])
     return df
 
+if __name__ == "":
+    pass

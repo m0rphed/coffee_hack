@@ -41,12 +41,14 @@ def preprocess_data(df: pd.DataFrame):
 # [м]
 def load_data(file_path: str) -> pd.DataFrame:
     """
-    Загрузка и очистка данных
+    Загрузка и очистка (дубликаты) данных
     """
-    df = pd.read_csv(file_path, sep=";")
-
+    df = pd.read_csv(
+        file_path,
+        sep=";",
+        quotechar='"'
+    )
     df["create_datetime"] = pd.to_datetime(df["create_datetime"])
-
     df = df.drop_duplicates(subset=["id"])
     df = df.dropna(subset=["entity_id"])
     return df

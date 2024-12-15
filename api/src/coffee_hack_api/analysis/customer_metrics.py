@@ -1,6 +1,6 @@
 import pandas as pd
 
-# import numpy as np
+import numpy as np
 from typing import Callable
 from coffee_hack_api.analysis.prepare import load_data
 
@@ -85,6 +85,59 @@ def calculate_unique_items(data: pd.DataFrame) -> pd.DataFrame:
     return customer_unique_items
 
 
+# 6.
+def calculate_last_order_date(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Дата последнего заказа
+    """
+    last_order_date = data.groupby("customer_id")["create_datetime"].max().reset_index()
+
+    last_order_date.rename(columns={"create_datetime": "last_order_date"}, inplace=True)
+    return last_order_date
+
+
+# 7.
+def calculate_time_of_day_preference(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Сезонные предпочтения (по времени суток)
+    """
+    data["hour"] = data["create_datetime"].dt.hour
+    time_of_day = (
+        data.groupby("customer_id")["hour"]
+        .apply(lambda x: x.mode()[0] if not x.mode().empty else np.nan)
+        .reset_index()
+    )
+    time_of_day.rename(columns={"hour": "preferred_time_of_day"}, inplace=True)
+    return time_of_day
+
+
+# 8.
+def calculate_weekday_and_hour_distribution(data: pd.DataFrame) -> pd.DataFrame:
+    """
+    Частота заказов по дням недели и по времени суток
+    """
+    data["weekday"] = data["create_datetime"].dt.dayofweek
+    data["hour"] = data["create_datetime"].dt.hour
+    weekday_distribution = (
+        data.groupby("customer_id")["weekday"]
+        .apply(lambda x: x.mode()[0] if not x.mode().empty else np.nan)
+        .reset_index()
+    )
+
+    hour_distribution = (
+        data.groupby("customer_id")["hour"]
+        .apply(lambda x: x.mode()[0] if not x.mode().empty else np.nan)
+        .reset_index()
+    )
+
+    weekday_distribution.rename(columns={"weekday": "preferred_weekday"}, inplace=True)
+    hour_distribution.rename(columns={"hour": "preferred_hour"}, inplace=True)
+    customer_distribution = weekday_distribution.merge(
+        hour_distribution, on="customer_id", how="left"
+    )
+    return customer_distribution
+
+
 # === объединяем все признаки в единую таблицу ===
 def combine_customer_features(data: pd.DataFrame) -> pd.DataFrame:
     """
@@ -131,6 +184,12 @@ def _prepare_customer_features(file_path: str) -> pd.DataFrame:
     return customer_features
 
 
+def __test_all_funcs(file_path: str):
+    _df_customer_features: pd.DataFrame = _prepare_customer_features(file_path)
+    print(_df_customer_features.head(10))
+    print(_df_customer_features.nunique())
+
+
 if __name__ == "__main__":
     from dotenv import load_dotenv
     import os
@@ -142,6 +201,7 @@ if __name__ == "__main__":
     if file_path is None:
         raise RuntimeError(f"Ошибка загрузки датасета из .csv: '{file_path}'")
 
-    _df_customer_features: pd.DataFrame = _prepare_customer_features(file_path)
-    print(_df_customer_features.head(10))
-    print(_df_customer_features.nunique())
+    _df: pd.DataFrame = load_data(file_path)
+    _df = calculate_weekday_and_hour_distribution(_df)
+    print(_df)
+    # __test_all_funcs(file_path)

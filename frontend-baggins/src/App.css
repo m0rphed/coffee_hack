@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -35,4 +36,18 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.MainPage {
+  display: flex;
+  justify-content: space-around;
+  margin: 10vh 0;
+}
+
+.AnalisPage, .UsersPage, .OneUserPage {
+  padding: 5vh 5vw ;
+}
+
+h1 {
+
 }

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -33,9 +33,46 @@ const data_popular = [{"entity_id":585,"order_count":45,"customer_id":9172},{"en
 const order_sale = [{"second_item":499,"count":7},{"second_item":476,"count":2},{"second_item":92,"count":4}]
 
 const OneUserPage = () => {
-    const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
-    const [user_id, setUserID] = useState(0)
+    const [data_hours, Setdata_hours] = useState([])
+    const [data_week, Setdata_week] = useState([])
+    const [data_popular, Setdata_popular] = useState([])
+    const [order_sale, Setorder_sale] = useState([])
+    const [user_id, setUserID] = useState(9172)
     const [enable_id, setEnableID] = useState(0)
+
+    const getApi_data_hours = async () => {
+        const response = await fetch(
+          "http://158.255.6.113:8000/customer/time_of_day_preference/" + user_id
+        ).then((response) => response.json());
+      
+        // Обновим состояние
+        Setdata_hours(response);
+      };
+      const getApi_data_week = async () => {
+        const response = await fetch(
+          "http://158.255.6.113:8000/customer/time_of_day_preference/" + user_id
+        ).then((response) => response.json());
+      
+        // Обновим состояние
+        Setdata_week(response);
+      };
+      const getApi_data_popular = async () => {
+        const response = await fetch(
+          "http://158.255.6.113:8000/customer/time_of_day_preference/" + user_id
+        ).then((response) => response.json());
+      
+        // Обновим состояние
+        Setdata_popular(response);
+      };
+
+      useEffect(() => {
+        getApi_data_hours();
+      }, [user_id]);
+
+
+
+
+    
     return (
         <div className="OneUserPage">
             <h1>

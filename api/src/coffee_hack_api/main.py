@@ -37,6 +37,7 @@ CSV_FILE_PATH = os.environ.get("DATASET_CSV_FILE")
 if CSV_FILE_PATH is None:
     raise RuntimeError(f"Ошибка загрузки датасета из .csv: '{CSV_FILE_PATH}'")
 
+print("[info] Путь к .csv файлу", CSV_FILE_PATH)
 app = FastAPI()
 
 DATAFRAME_CACHE: pd.DataFrame = None
@@ -176,8 +177,9 @@ async def popular_products_of_the_day_(
 
 @app.get("/products/most_frequent_pairs")
 async def most_frequent_pairs(customer_id: Optional[int] = Query(None)) -> list[dict]:
-    data = get_data()
-    result = find_most_frequent_pairs(data, customer_id)
+    data_df = get_data()
+    df_buy_together = buy_together(data_df) # Объединение заказов
+    result = find_most_frequent_pairs(df_buy_together, customer_id)
     return result.to_dict(orient="records")
 
 
@@ -214,6 +216,7 @@ async def rfm_full() -> list[dict]:
 
 
 if __name__ == "__main__":
+    # Remover4Spokesman
     # Вычисляем метрики клиентов
     customer_metrics = get_customer_metrics()
     print("Метрики клиентов")

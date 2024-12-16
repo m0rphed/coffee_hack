@@ -66,7 +66,7 @@ def find_most_frequent_pairs(
     Функция находит наиболее часто покупаемые вместе товары для клиента,
     если не передаём клиента -- то по общим.
 
-    :param df: DataFrame с колонками 'order_id' и 'entity_id' (где entity_id - список товаров)
+    :param df: DataFrame с колонками 'order_id' и 'entity_id' [⚠️ т.е. требуется вызов buy_together] (где entity_id - список товаров)
     :return: DataFrame с парами товаров и их частотой
     """
     if customer_id is None:
@@ -74,7 +74,7 @@ def find_most_frequent_pairs(
     else:
         find_df = df[df["customer_id"] == customer_id]
 
-    def generate_item_pairs(item_list):
+    def generate_item_pairs(item_list: list) -> list:
         return list(combinations(sorted(item_list), 2))
 
     all_pairs = []

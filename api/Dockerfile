@@ -5,14 +5,17 @@ FROM python:3.12-slim
 # Устанавливаем рабочую директорию
 WORKDIR /app
 
+# Устанавливаем git для поддержки editable пакетов
+RUN apt-get update && apt-get install -y git && rm -rf /var/lib/apt/lists/*
+
 # Устанавливаем зависимости для работы с переменными окружения
 RUN pip install python-dotenv
 
 # Скопируем зависимости
-COPY pyproject.toml pdm.lock requirement.txt ./
+COPY requirements.txt ./
 
-# Устанавливаем PDM (если используется) и зависимости
-RUN pip install pdm && pdm install --production
+# Устанавливаем зависимости из requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Скопируем исходники приложения
 COPY src ./src

@@ -8,7 +8,7 @@ $IMAGE_NAME = "coffee_api_image"
 
 Write-Host "Stopping existing container..."
 # Остановка и удаление старого контейнера
-if (docker ps -q --filter "name=$CONTAINER_NAME") {
+if (docker ps -aq --filter "name=$CONTAINER_NAME") {
     docker stop $CONTAINER_NAME | Out-Null
     docker rm $CONTAINER_NAME | Out-Null
 }

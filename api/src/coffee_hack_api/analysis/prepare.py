@@ -1,4 +1,5 @@
 import pandas as pd
+import os
 
 # [м]
 def preprocess_data(df: pd.DataFrame):
@@ -43,6 +44,8 @@ def load_data(file_path: str) -> pd.DataFrame:
     """
     Загрузка и очистка (дубликаты) данных
     """
+    print("[info] вызван analysis.prepare.load_data, cwd:", os.getcwd())
+    print(f'[info] -> путь `{file_path}`')
     df = pd.read_csv(
         file_path,
         sep=";",
@@ -53,5 +56,5 @@ def load_data(file_path: str) -> pd.DataFrame:
     df = df.dropna(subset=["entity_id"])
     return df
 
-if __name__ == "":
+if __name__ == "__main__":
     pass

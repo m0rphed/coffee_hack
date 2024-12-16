@@ -1,0 +1,198 @@
+{
+    "2020-04-24": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 252
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 150
+        },
+        {
+            "product_name": "Товар 545",
+            "sales_count": 94
+        }
+    ],
+    "2020-04-25": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 198
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 115
+        },
+        {
+            "product_name": "Товар 543",
+            "sales_count": 75
+        }
+    ],
+    "2020-04-26": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 190
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 111
+        },
+        {
+            "product_name": "Товар 543",
+            "sales_count": 79
+        }
+    ],
+    "2020-04-27": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 262
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 204
+        },
+        {
+            "product_name": "Товар 543",
+            "sales_count": 97
+        }
+    ],
+    "2020-04-28": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 215
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 190
+        },
+        {
+            "product_name": "Товар 536",
+            "sales_count": 90
+        }
+    ],
+    "2020-04-29": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 241
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 172
+        },
+        {
+            "product_name": "Товар 543",
+            "sales_count": 98
+        }
+    ],
+    "2020-04-30": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 278
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 199
+        },
+        {
+            "product_name": "Товар 543",
+            "sales_count": 106
+        }
+    ],
+    "2020-05-01": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 257
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 154
+        },
+        {
+            "product_name": "Товар 543",
+            "sales_count": 82
+        }
+    ],
+    "2020-05-02": [
+        {
+            "product_name": "Товар 1189",
+            "sales_count": 406
+        },
+        {
+            "product_name": "Товар 542",
+            "sales_count": 251
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 152
+        }
+    ],
+    "2020-05-03": [
+        {
+            "product_name": "Товар 1189",
+            "sales_count": 166
+        },
+        {
+            "product_name": "Товар 542",
+            "sales_count": 159
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 116
+        }
+    ],
+    "2020-05-04": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 260
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 164
+        },
+        {
+            "product_name": "Товар 1189",
+            "sales_count": 158
+        }
+    ],
+    "2020-05-05": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 284
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 176
+        },
+        {
+            "product_name": "Товар 1189",
+            "sales_count": 175
+        }
+    ],
+    "2020-05-06": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 313
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 197
+        },
+        {
+            "product_name": "Товар 1189",
+            "sales_count": 167
+        }
+    ],
+    "2020-05-07": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 282
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 194
+        },
+        {
+            "product_name": "Товар 543",
+            "sales_count": 102
+        }
+    ]
+}

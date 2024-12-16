@@ -1,0 +1,37 @@
+[project]
+name = "coffee_hack_api"
+version = "0.1.0"
+description = "хакатон baggins coffee - Backend API для аналитического сервиса"
+authors = [
+    {name = "Evgenia Galeeva, Matvei Golovkin, Victor Khovanov", email = "victorkhovtko@gmail.com"},
+]
+dependencies = [
+    "fastapi[standard]>=0.115.6",
+    "python-dotenv>=1.0.1",
+    "uvicorn>=0.34.0",
+    "pandas>=2.2.3"
+]
+
+requires-python = ">=3.12"
+readme = "README.md"
+license = {text = "MIT"}
+
+[project.optional-dependencies]
+analysis = [
+    "mlxtend>=0.23.3",
+    "pandas>=2.2.3",
+    "matplotlib>=3.10.0",
+    "numpy>=2.2.0",
+    "seaborn>=0.13.2",
+    "ipykernel>=6.29.5",
+]
+dev = [
+    "ruff>=0.8.3",
+]
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
+
+
+[tool.pdm]
+distribution = true

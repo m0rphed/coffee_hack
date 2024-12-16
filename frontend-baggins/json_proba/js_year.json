@@ -1,0 +1,170 @@
+{
+    "Январь": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 15601
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 10071
+        },
+        {
+            "product_name": "Товар 536",
+            "sales_count": 5427
+        }
+    ],
+    "Февраль": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 18530
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 12075
+        },
+        {
+            "product_name": "Товар 545",
+            "sales_count": 6147
+        }
+    ],
+    "Март": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 17079
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 11156
+        },
+        {
+            "product_name": "Товар 545",
+            "sales_count": 5945
+        }
+    ],
+    "Апрель": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 5165
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 3326
+        },
+        {
+            "product_name": "Товар 543",
+            "sales_count": 1962
+        }
+    ],
+    "Май": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 10461
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 6936
+        },
+        {
+            "product_name": "Товар 543",
+            "sales_count": 3666
+        }
+    ],
+    "Июнь": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 14382
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 9799
+        },
+        {
+            "product_name": "Товар 1201",
+            "sales_count": 5368
+        }
+    ],
+    "Июль": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 18970
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 14123
+        },
+        {
+            "product_name": "Товар 536",
+            "sales_count": 6560
+        }
+    ],
+    "Август": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 20622
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 15653
+        },
+        {
+            "product_name": "Товар 536",
+            "sales_count": 7390
+        }
+    ],
+    "Сентябрь": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 24028
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 18958
+        },
+        {
+            "product_name": "Товар 545",
+            "sales_count": 8667
+        }
+    ],
+    "Октябрь": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 24962
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 19844
+        },
+        {
+            "product_name": "Товар 536",
+            "sales_count": 9032
+        }
+    ],
+    "Ноябрь": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 21981
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 17260
+        },
+        {
+            "product_name": "Товар 545",
+            "sales_count": 7788
+        }
+    ],
+    "Декабрь": [
+        {
+            "product_name": "Товар 542",
+            "sales_count": 22958
+        },
+        {
+            "product_name": "Товар 541",
+            "sales_count": 17107
+        },
+        {
+            "product_name": "Товар 536",
+            "sales_count": 7866
+        }
+    ]
+}
